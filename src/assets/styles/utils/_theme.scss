@@ -1,0 +1,13 @@
+@use "../abstract/index" as a;
+
+.text-black {
+  color: a.$clr-black;
+}
+
+.text-grey {
+  color: a.$clr-grey;
+}
+
+.text-white {
+  color: a.$clr-white;
+}

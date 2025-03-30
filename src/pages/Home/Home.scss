@@ -1,0 +1,12 @@
+.home {
+  display    : grid;
+  min-height : 100vh;
+
+  @include breakpoint(small) {
+    grid-template-rows : 2fr 1fr;
+  }
+
+  @include breakpoint(medium) {
+    grid-template-rows : 1fr min-content;
+  }
+}

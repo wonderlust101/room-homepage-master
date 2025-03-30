@@ -1,0 +1,100 @@
+.header {
+  position    : absolute;
+  z-index     : 2;
+  display     : flex;
+  align-items : center;
+  width       : 100%;
+  padding     : 3rem 1.5rem;
+
+  &__backdrop {
+    position         : absolute;
+    z-index          : 1;
+    width            : 100vw;
+    height           : 100vh;
+    background-color : $clr-black;
+    opacity          : 0.3;
+
+    @include breakpoint(small) {
+      display : none;
+    }
+  }
+
+  @include breakpoint(small) {
+    gap     : 4rem;
+    padding : 3rem 4.5rem;
+  }
+
+  &__burger,
+  &__close {
+    @include breakpoint(small) {
+      display : none;
+    }
+  }
+
+  &__logo {
+    position  : absolute;
+    left      : 50%;
+    transform : translateX(-50%);
+
+    @include breakpoint(small) {
+      position  : unset;
+      left      : unset;
+      transform : unset;
+    }
+  }
+
+  &__nav {
+    position         : absolute;
+    z-index          : 3;
+    top              : 0;
+    left             : 0;
+    display          : flex;
+    align-items      : center;
+    gap              : 4rem;
+    width            : 100%;
+    padding          : 3rem 1.5rem;
+    background-color : $clr-white;
+
+    @include breakpoint(small) {
+      position         : unset;
+      padding-left     : unset;
+      background-color : unset;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include breakpoint(small) {
+        position: unset;
+        display: flex;
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+
+    &__nav--mobile {
+      @include breakpoint(small) {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-links {
+    position        : absolute;
+    left            : 50%;
+    display         : flex;
+    justify-content : center;
+    gap             : 2rem;
+    color           : $clr-black;
+    transform       : translateX(-50%);
+
+
+    @include breakpoint(small) {
+      position        : unset;
+      left            : unset;
+      justify-content : flex-start;
+      color           : $clr-white;
+      transform       : unset;
+    }
+  }
+}

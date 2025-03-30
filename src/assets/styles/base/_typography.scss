@@ -1,0 +1,102 @@
+@use "../abstract/index" as a;
+
+// Global Styles
+* {
+  font-family : "League Spartan", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Heading Styles
+.heading-xl {}
+
+.heading-lg {
+  font-size      : 2.5rem;
+  font-weight    : 600;
+  letter-spacing : -0.125rem;
+
+  @include a.breakpoint(small) {
+    font-size : 3rem;
+  }
+}
+.heading-md {
+  font-size      : 0.875rem;
+  font-weight    : 700;
+  line-height    : 1.375rem;
+  letter-spacing : 0.36456rem;
+  text-transform : uppercase;
+
+  @include a.breakpoint(small) {
+    font-size      : 1rem;
+    letter-spacing : 0.3125rem;
+  }
+}
+
+.heading-sm {}
+.heading-xs {}
+
+// Text Styles
+.text-xl {}
+.text-lg {}
+
+.text-md {
+  font-size      : 1rem;
+  line-height    : 1.375;
+  letter-spacing : -0.02081rem;
+}
+
+.text-sm {}
+
+.text-xs {}
+
+// Misc. Styles
+.header-link {
+  font-size      : 1rem;
+  font-weight    : 600;
+  letter-spacing : -0.04169rem;
+
+  &:hover {
+    text-decoration: underline 2px a.$clr-white;
+    text-underline-offset: 0.75rem;
+  }
+}
+
+.link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.78125rem;
+  text-transform : uppercase;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// Font Weight
+.bold {font-weight : 700;}
+.semi-bold {font-weight : 600;}
+.medium {font-weight : 500;}
+.normal {font-weight : 400;}
+.light {font-weight : 300;}
+
+// Font Style
+.italic {font-style : italic;}
+.normal {font-style : normal;}
+
+// Text Alignment
+.text-left {text-align : left;}
+.text-center {text-align : center;}
+.text-right {text-align : right;}
+
+// Text Transformation
+.uppercase {text-transform : uppercase;}
+.lowercase {text-transform : lowercase;}
+.capitalize {text-transform : capitalize;}
